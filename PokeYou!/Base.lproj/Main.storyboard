@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokeYou_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQF-Pm-46c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="313.5"/>
+                                <color key="backgroundColor" red="0.91104608774185181" green="0.49151748418807983" blue="0.35668784379959106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="short">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shortPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ptU-EP-2AF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVg-c3-bv6">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <color key="backgroundColor" red="0.21736955642700195" green="0.57164007425308228" blue="0.96058326959609985" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="long">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="longPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sdV-F8-1qK"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vL5-YG-gL5">
+                                <rect key="frame" x="146" y="285" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VQF-Pm-46c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0ex-cm-2Tb"/>
+                            <constraint firstItem="VQF-Pm-46c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8Ac-jS-noU"/>
+                            <constraint firstAttribute="trailing" secondItem="VQF-Pm-46c" secondAttribute="trailing" id="ZMU-MF-A5G"/>
+                            <constraint firstItem="hVg-c3-bv6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fE3-Y0-m0x"/>
+                            <constraint firstAttribute="trailing" secondItem="hVg-c3-bv6" secondAttribute="trailing" id="gwf-yU-JZc"/>
+                            <constraint firstItem="hVg-c3-bv6" firstAttribute="top" secondItem="VQF-Pm-46c" secondAttribute="bottom" id="uoS-3x-eas"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VQF-Pm-46c" secondAttribute="bottom" multiplier="2" id="uwa-S9-3Mw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hVg-c3-bv6" secondAttribute="bottom" id="vfp-Y9-lc1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnLong" destination="hVg-c3-bv6" id="2X4-qd-Pbd"/>
+                        <outlet property="btnShort" destination="VQF-Pm-46c" id="uZT-lM-nHj"/>
+                        <outlet property="sliderSt" destination="vL5-YG-gL5" id="iYk-rh-hQ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
